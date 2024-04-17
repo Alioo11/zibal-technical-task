@@ -1,6 +1,7 @@
 {
   "name": "zibal-technical-task",
   "version": "0.1.0",
+  "type": "module",
   "private": true,
   "scripts": {
     "dev": "next dev",
@@ -9,14 +10,19 @@
     "lint": "next lint"
   },
   "dependencies": {
+    "antd": "^5.16.2",
+    "axios": "^1.6.8",
+    "moment-jalaali": "^0.10.0",
+    "next": "13.5.2",
     "react": "^18",
-    "react-dom": "^18",
-    "next": "14.2.1"
+    "react-dom": "^18"
   },
   "devDependencies": {
-    "typescript": "^5",
+    "@types/moment-jalaali": "^0.7.9",
     "@types/node": "^20",
     "@types/react": "^18",
-    "@types/react-dom": "^18"
+    "@types/react-dom": "^18",
+    "ts-wiz": "^0.2.0",
+    "typescript": "^5"
   }
 }
