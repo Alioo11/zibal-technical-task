@@ -4,14 +4,14 @@ const data: Array<Transaction> = [
   {
     amount: 10000,
     trackId: 142513723,
-    status: 1,
+    status: 2,
     paidAt: "1399/09/22-10:53:50",
     cardNumber: "585983******8890",
   },
   {
     amount: 15000,
     trackId: 242513723,
-    status: 1,
+    status: 2,
     paidAt: "1399/09/22-10:54:50",
     cardNumber: "585984******8890",
   },
