@@ -14,6 +14,8 @@ export default function handler(
 ) {
   const { trackId, cardNumber } = req.query;
 
+  console.log(trackId , cardNumber)
+
   const filteredTransactionData = data.filter((dataEntry) => {
     const trackIdMatch =
       !trackId || dataEntry.trackId.toString().includes(trackId.toString());
