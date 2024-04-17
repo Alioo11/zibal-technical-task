@@ -5,7 +5,7 @@ To start the project run the following commands
 ```bash
 git clone git@github.com:Alioo11/zibal-technical-task.git
 
-yarn install 
+npm install 
 
-yarn dev
+npm dev
 ```
