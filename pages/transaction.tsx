@@ -1,4 +1,5 @@
 import { useEffect, useState } from "react";
+import Head from "next/head";
 import Container from "@/components/Container";
 import TransactionTableHeaderSearchBox from "@/components/Transaction/Table/HeaderSearchBox";
 import TransactionTablePaidAt from "@/components/Transaction/Table/PaidAt";
@@ -10,8 +11,6 @@ import textHelper from "@/helpers/text";
 import TransactionService from "@/services/transaction";
 import type { Transaction } from "@/types/transaction";
 import type { Nullable } from "ts-wiz";
-import useToggle from "@/hooks/useToggle";
-import Head from "next/head";
 
 let timeoutRef: Nullable<NodeJS.Timeout> = null;
 
@@ -39,6 +38,7 @@ const TransactionPage = () => {
             const { value } = e.target;
             setTrackIdSearch(value ? Number(value) : null);
           }}
+          onClear={() => setTrackIdSearch(null)}
           title="شماره تراکنش"
         />
       ),
@@ -74,6 +74,7 @@ const TransactionPage = () => {
           type="string"
           inputValue={cardNumberSearch}
           onInputChange={(e) => setCardNumberSearch(e.target.value)}
+          onClear={() => setCardNumberSearch("")}
         />
       ),
       dataIndex: "cardNumber",
@@ -84,7 +85,7 @@ const TransactionPage = () => {
   ];
 
   useEffect(() => {
-    timeoutRef = setTimeout(handleGetTransactionData, 1000);
+    timeoutRef = setTimeout(handleGetTransactionData, 500);
     return () => {
       if (timeoutRef) clearTimeout(timeoutRef);
     };
